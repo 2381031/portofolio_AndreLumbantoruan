@@ -64,7 +64,7 @@ export const education: Education = {
 export const experiences: Experience[] = [
   {
     role: "Distribution Center Staff",
-    company: "PT Imani Sehat",
+    company: "PT Misi Sehat Imani",
     location: "Sentra Industri Terpadu 1 & 2, Blok G2 No.9 Elang Laut, PIK",
     period: "Dec 2025 – Jan 2026",
     responsibilities: [
@@ -81,7 +81,7 @@ export const experiences: Experience[] = [
     period: "Dec 2024 – Jan 2025",
     responsibilities: [
       "Mengelola operasional harian toko ritel kesehatan selama 1 bulan penuh.",
-      "Menghitung, memproses, dan memvalidasi barang masuk ke gudang toko yang dikirimkan oleh DC PT. Imani Sehat.",
+      "Menghitung, memproses, dan memvalidasi barang masuk ke gudang toko yang dikirimkan oleh DC PT. Misi Sehat Imani.",
       "Memberikan pelayanan customer service yang responsif ketika pelanggan mencari produk.",
       "Melakukan penataan visual merchandising dan menyusun stok barang di rak-rak pajangan yang kosong."
     ],
@@ -156,8 +156,8 @@ export const chatAssistantAnswers = [
     answer: "Andre sedang menempuh pendidikan **S1 Teknik Informatika** di **Universitas Advent Indonesia** (angkatan 2023 - Sekarang). Saat ini ia memiliki **IPK/GPA: 3.62 / 4.0**, dengan mata kuliah relevan seperti Pemrograman Web 1 & 2, Algoritma Pemrograman, dan Pemrograman Basis Data."
   },
   {
-    keywords: ["kerja", "pengalaman", "karyawan", "gudang", "dc", "pt imani sehat", "club sehat", "berpengalaman"],
-    answer: "Andre memiliki dua pengalaman kerja signifikan:\n1. **Distribution Center Staff** di **PT Imani Sehat** (Desember 2025 – Januari 2026), mengelola logistik gudang, visual packing, dan koordinasi distribusi antar-cabang toko.\n2. **Karyawan Toko** di **Club Sehat Cideng Barat** (Desember 2024 – Januari 2025), melayani pelanggan, memproses logistik barang masuk, dan menata pajangan rak."
+    keywords: ["kerja", "pengalaman", "karyawan", "gudang", "dc", "PT Misi Sehat Imani", "club sehat", "berpengalaman"],
+    answer: "Andre memiliki dua pengalaman kerja signifikan:\n1. **Distribution Center Staff** di **PT Misi Sehat Imani** (Desember 2025 – Januari 2026), mengelola logistik gudang, visual packing, dan koordinasi distribusi antar-cabang toko.\n2. **Karyawan Toko** di **Club Sehat Cideng Barat** (Desember 2024 – Januari 2025), melayani pelanggan, memproses logistik barang masuk, dan menata pajangan rak."
   },
   {
     keywords: ["skill", "teknologi", "bahasa", "pemrograman", "bisa apa", "keahlian", "react", "nestjs", "typescript", "python", "c++"],
