@@ -52,7 +52,7 @@ export const biography = {
   phone: "0895-2764-6626",
   email: "Lumbantoruanandre9@gmail.com",
   github: "https://github.com/2381031",
-  portfolio: "https://portofolio-tau-seven-39.vercel.app/",
+  portfolio: "https://portofolio-andre-lumbantoruan.vercel.app/",
   profilePhoto: "/assets/profile.jpg",
   summary:
     "Mahasiswa Teknik Informatika yang memiliki minat pada bidang pengembangan Web dan Internet of Things (IoT), serta telah mempelajari bahasa pemrograman C/C++, JavaScript, Python, serta HTML dan CSS. Saat ini sedang mencari kesempatan magang untuk mengembangkan keterampilan teknis dan pengalaman praktis. Memiliki kemampuan dalam pemecahan masalah serta terbiasa mempelajari teknologi baru, dengan motivasi untuk berkontribusi dalam pengembangan solusi digital yang inovatif dan efisien.",
