@@ -364,30 +364,36 @@ export default function App() {
               </div>
             </section>
 
-            {/* EXPERIENCE SIMULATOR TIMELINE */}
-            <section id="experience-section" className="space-y-8">
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/5 pb-4">
-                <div className="space-y-1">
-                  <div className="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 uppercase tracking-widest">
-                    <Briefcase className="h-3.5 w-3.5" />
-                    Timeline Karir
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white">
-                    Pengalaman Kerja
-                  </h2>
+                       {/* EXPERIENCE SECTION - CLEAN CENTERED */}
+            <section id="experience-section" className="space-y-6">
+              <div className="max-w-3xl mx-auto text-center space-y-3 border-b border-white/5 pb-5">
+                <div className="inline-flex items-center justify-center gap-1.5 text-xs font-mono text-cyan-400 uppercase tracking-widest">
+                  <Briefcase className="h-3.5 w-3.5" />
+                  Timeline Karir
                 </div>
 
-                {/* Experience selector buttons */}
-                <div className="flex gap-2 bg-slate-900 p-1.5 rounded-xl border border-white/5">
+                <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white">
+                  Pengalaman Kerja
+                </h2>
+
+                <p className="text-sm text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                  Ringkasan pengalaman kerja Andre dengan tampilan yang lebih bersih,
+                  nyaman dibaca, dan tidak terlalu penuh.
+                </p>
+              </div>
+
+              {/* Experience selector buttons */}
+              <div className="flex justify-center">
+                <div className="flex flex-wrap justify-center gap-2 bg-slate-950/70 p-1.5 rounded-2xl border border-white/5">
                   {experiences.map((exp, idx) => (
                     <button
                       key={exp.company}
                       id={`btn-experience-tab-${idx}`}
                       onClick={() => setSelectedExperience(idx)}
-                      className={`px-4 py-2 rounded-lg text-xs font-mono transition-all ${
-                        selectedExperience === idx 
-                          ? "bg-cyan-500 text-cyber-dark font-bold shadow-md shadow-cyan-500/10" 
-                          : "text-slate-400 hover:text-white"
+                      className={`px-4 py-2 rounded-xl text-xs font-mono transition-all ${
+                        selectedExperience === idx
+                          ? "bg-cyan-500 text-cyber-dark font-bold shadow-md shadow-cyan-500/10"
+                          : "text-slate-400 hover:text-white hover:bg-white/5"
                       }`}
                     >
                       {exp.company}
@@ -396,127 +402,65 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Interactive Experience Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                
-                {/* Selected Experience Detail */}
-                <div className="lg:col-span-7 bg-cyber-card/60 card-gloss rounded-3xl p-6 sm:p-8 space-y-6">
-                  <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/5 pb-4">
-                    <div className="space-y-1">
-                      <h3 className="text-xl font-display font-bold text-white">
+              {/* Selected Experience Detail - Centered Card */}
+              <div className="flex justify-center">
+                <div className="w-full max-w-3xl bg-cyber-card/60 card-gloss rounded-3xl border border-white/5 p-5 sm:p-7 md:p-8 space-y-6 shadow-xl shadow-cyan-500/5">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 border-b border-white/5 pb-5">
+                    <div className="space-y-1.5">
+                      <h3 className="text-xl sm:text-2xl font-display font-bold text-white leading-tight">
                         {experiences[selectedExperience].role}
                       </h3>
+
                       <p className="text-cyan-400 font-mono text-sm font-semibold">
                         {experiences[selectedExperience].company}
                       </p>
                     </div>
-                    <div className="text-right">
-                      <span className="inline-block bg-white/5 border border-white/5 text-slate-300 font-mono text-xs px-3 py-1 rounded-full">
+
+                    <div className="sm:text-right">
+                      <span className="inline-block bg-white/5 border border-white/10 text-slate-300 font-mono text-xs px-3 py-1.5 rounded-full">
                         {experiences[selectedExperience].period}
                       </span>
-                      <p className="text-[11px] text-slate-500 font-mono mt-1">
-                        1 Bulan Kontrak Kerja
+
+                      <p className="text-[11px] text-slate-500 font-mono mt-1.5">
+                        Pengalaman Kerja
                       </p>
                     </div>
                   </div>
 
-                  <div className="space-y-1">
-                    <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block">LOKASI PENUGASAN</span>
-                    <div className="flex items-center gap-2 text-slate-300 text-xs font-mono">
-                      <MapPin className="h-4 w-4 text-emerald-400 shrink-0" />
+                  <div className="rounded-2xl bg-slate-950/45 border border-white/5 p-4 space-y-2">
+                    <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block">
+                      Lokasi Penugasan
+                    </span>
+
+                    <div className="flex items-start gap-2 text-slate-300 text-xs sm:text-sm font-mono leading-relaxed">
+                      <MapPin className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
                       <span>{experiences[selectedExperience].location}</span>
                     </div>
                   </div>
 
-                  {/* Core tasks list */}
-                  <div className="space-y-3 pt-2">
-                    <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block">PENCAPAIAN DAN TUGAS UTAMA</span>
+                  <div className="space-y-4">
+                    <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider block">
+                      Pencapaian dan Tugas Utama
+                    </span>
+
                     <ul className="space-y-3">
                       {experiences[selectedExperience].responsibilities.map((resp, i) => (
-                        <li key={i} className="flex items-start gap-3 text-slate-300 text-xs sm:text-sm">
-                          <span className="h-5 w-5 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xs font-mono font-bold shrink-0 mt-0.5">
-                            {i+1}
+                        <li
+                          key={i}
+                          className="flex items-start gap-3 text-slate-300 text-xs sm:text-sm leading-relaxed"
+                        >
+                          <span className="h-6 w-6 rounded-full bg-cyan-500/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 text-xs font-mono font-bold shrink-0 mt-0.5">
+                            {i + 1}
                           </span>
-                          <span className="leading-relaxed">{resp}</span>
+
+                          <span className="leading-relaxed">
+                            {resp}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-
-                {/* Cyber Warehouse Simulation Graphic (A truly canggih touch showing his exact CV domain!) */}
-                <div className="lg:col-span-5 bg-slate-950/80 rounded-3xl p-6 border border-white/5 space-y-4 font-mono">
-                  <div className="flex justify-between items-center text-xs border-b border-white/5 pb-2">
-                    <span className="text-slate-400 flex items-center gap-2">
-                      <Terminal className="h-4 w-4 text-emerald-400" />
-                      Sistem Logistik Dev Simulation
-                    </span>
-                    <span className="text-[10px] text-cyan-400">ACTIVE: SIM_V01</span>
-                  </div>
-
-                  {selectedExperience === 0 ? (
-                    /* PT Imani Sehat (Distribution Center) Visual simulation */
-                    <div className="space-y-4 text-xs">
-                      <p className="text-slate-400 text-[11px] leading-relaxed">
-                        Simulasi operasional Distribusi Logistik PT Misi Sehat Imani . Mengelola rantai pasokan dari pusat penyimpanan (packing) ke toko cabang.
-                      </p>
-
-                      <div className="space-y-2 bg-slate-900/50 p-3 rounded-lg border border-white/5">
-                        <div className="flex justify-between text-[11px] text-slate-500">
-                          <span>KAPASITAS GUDANG DC</span>
-                          <span className="text-emerald-400">92% SECURE</span>
-                        </div>
-                        <div className="w-full bg-slate-850 h-2 rounded-full overflow-hidden">
-                          <div className="bg-gradient-to-r from-emerald-500 to-cyan-400 h-full rounded-full" style={{ width: '92%' }}></div>
-                        </div>
-                      </div>
-
-                      {/* Log output simulated */}
-                      <div className="bg-black/40 p-3 rounded-lg text-[10px] leading-relaxed space-y-1.5 text-slate-400 border border-white/5">
-                        <div className="text-cyan-400">[SYSTEM] Menginisiasi proses audit stok barang...</div>
-                        <div>[IMANI_SEHAT_DC] Memverifikasi data produk packing log.</div>
-                        <div>[IMANI_SEHAT_DC] Menyimpan barang ke rak kode DC-G2-E9.</div>
-                        <div className="text-emerald-400">[SUCCESS] Distribusi ke Club Sehat Jakarta Pusat sukses diantar.</div>
-                      </div>
-
-                      <div className="flex justify-between items-center text-[10px] text-slate-500">
-                        <span>Pekerja DC</span>
-                        <span>ANDRE LUMBANTORUAN</span>
-                      </div>
-                    </div>
-                  ) : (
-                    /* Club Sehat (Karyawan Toko) Retail Visual simulation */
-                    <div className="space-y-4 text-xs">
-                      <p className="text-slate-400 text-[11px] leading-relaxed">
-                        Visualisasi kasir, kontrol stok inventori rak, dan pelayanan pelanggan di unit retail Club Sehat Cideng Barat.
-                      </p>
-
-                      <div className="grid grid-cols-2 gap-2 text-center text-[11px]">
-                        <div className="bg-slate-900/40 p-2 rounded border border-white/5">
-                          <div className="text-slate-500">STOK RAK DISETEL</div>
-                        </div>
-                        <div className="bg-slate-900/40 p-2 rounded border border-white/5">
-                          <div className="text-slate-500">INVENTORI COUNTER</div>
-                          <div className="text-sm font-bold text-emerald-400 font-mono">Audited OK</div>
-                        </div>
-                      </div>
-
-                      {/* Retail log simulation */}
-                      <div className="bg-black/40 p-3 rounded-lg text-[10px] leading-relaxed space-y-1.5 text-slate-400 border border-white/5">
-                        <div className="text-cyan-400">[SYSTEM_STORE] Kasir standby, visual rak teratur aman.</div>
-                        <div>[RETAIL] Menerima barang transit kiriman dari DC PT Imani Sehat.</div>
-                        <div>[RETAIL] Melakukan updating log stok dari barang diterima dari Distribution Center.</div>
-                        <div className="text-emerald-400">[SERVICE] Aktif melayani pencarian barang pembeli.</div>
-                      </div>
-
-                      <div className="flex justify-between items-center text-[10px] text-slate-500">
-                        <span>Pekerja Toko</span>
-                        <span>ANDRE LUMBANTORUAN</span>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
               </div>
             </section>
 
