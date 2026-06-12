@@ -480,7 +480,7 @@ export default function App() {
                       </div>
 
                       <div className="flex justify-between items-center text-[10px] text-slate-500">
-                        <span>PENGARAH LOGISTIK</span>
+                        <span>Pekerja DC</span>
                         <span>ANDRE LUMBANTORUAN</span>
                       </div>
                     </div>
@@ -494,7 +494,6 @@ export default function App() {
                       <div className="grid grid-cols-2 gap-2 text-center text-[11px]">
                         <div className="bg-slate-900/40 p-2 rounded border border-white/5">
                           <div className="text-slate-500">STOK RAK DISETEL</div>
-                          <div className="text-sm font-bold text-cyan-400 font-mono">100% Rapi</div>
                         </div>
                         <div className="bg-slate-900/40 p-2 rounded border border-white/5">
                           <div className="text-slate-500">INVENTORI COUNTER</div>
@@ -506,12 +505,12 @@ export default function App() {
                       <div className="bg-black/40 p-3 rounded-lg text-[10px] leading-relaxed space-y-1.5 text-slate-400 border border-white/5">
                         <div className="text-cyan-400">[SYSTEM_STORE] Kasir standby, visual rak teratur aman.</div>
                         <div>[RETAIL] Menerima barang transit kiriman dari DC PT Imani Sehat.</div>
-                        <div>[RETAIL] Melakukan updating log stok permen/makanan sehat.</div>
+                        <div>[RETAIL] Melakukan updating log stok dari barang diterima dari Distribution Center.</div>
                         <div className="text-emerald-400">[SERVICE] Aktif melayani pencarian barang pembeli.</div>
                       </div>
 
                       <div className="flex justify-between items-center text-[10px] text-slate-500">
-                        <span>PENATA OPERASIONAL</span>
+                        <span>Pekerja Toko</span>
                         <span>ANDRE LUMBANTORUAN</span>
                       </div>
                     </div>
